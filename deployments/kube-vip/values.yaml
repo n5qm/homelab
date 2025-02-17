@@ -1,0 +1,25 @@
+config:
+  address: "192.168.1.199"
+
+env:
+  vip_interface: "eth0"
+  vip_arp: "true"
+  lb_enable: "false"
+  lb_port: "6443"
+  vip_cidr: "32"
+  cp_enable: "true"
+  svc_enable: "false"
+  svc_election: "false"
+  vip_leaderelection: "true"
+  prometheus_server: ""
+
+extraArgs: {}
+  # Specify additional arguments to kube-vip
+  # For example, to change the Prometheus HTTP server port, use the following:
+  # prometheusHTTPServer: "0.0.0.0:2112"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+# Custom namespace to override the namespace for the deployed resources.
+namespaceOverride: ""
